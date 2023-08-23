@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 
+const cors = require('cors');
 
 
 
@@ -25,5 +26,6 @@ const BookRoute = require("./route/BookRoute")
 
 
 app.use(express.json());
+app.use(cors());
 app.use("/books", BookRoute);
 
