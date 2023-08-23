@@ -39,6 +39,7 @@ const addBooks = async (req, res, next)=>{
 }
 
 const getBookbyId = async (req, res, next)=>{
+    console.log("hi im in get book");
     let books;
     let id = req.params.id;
     try{
@@ -82,9 +83,6 @@ const deleteById = async (req, res, next)=>{
         console.log(err);
     }
 }
-
-
-
 
 exports.getBooks = getBooks;
 exports.addBooks = addBooks;
